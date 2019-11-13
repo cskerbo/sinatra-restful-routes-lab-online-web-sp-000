@@ -4,11 +4,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-
-
   get '/recipes/new' do
-    erb :recipe
-
+    erb :new
   end
 
   post '/recipes' do
@@ -19,10 +16,12 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes' do
     @recipes = Recipe.all
-    @recipes.each do |x|
-      name = x[:name]
-    end
+
     erb :index
   end
 
+  get '/recipes/:id' do
+    @recipe = Recipe.find(params[:id])
+
+    erb :
 end
