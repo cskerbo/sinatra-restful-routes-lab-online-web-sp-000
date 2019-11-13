@@ -10,6 +10,7 @@
 
 <body>
   <h1>Recipe Database</h1>
+  <button type="button" onclick="/recipes/new">Add New Recipe</button>
   <% @recipes.each do |item|%>
   <h2>Name: <%= item[:name] %></h2>
   <h2>Ingredients: <%= item[:ingredients]%></h2>
