@@ -11,7 +11,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes/new' do
-
     erb :recipe
 
   end
