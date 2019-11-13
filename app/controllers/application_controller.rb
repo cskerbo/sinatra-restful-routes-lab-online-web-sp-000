@@ -6,7 +6,9 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes' do
     @recipes = Recipe.all
-
+    @recipes.each do |x|
+      name = x[:name]
+    end
     erb :index
   end
 
