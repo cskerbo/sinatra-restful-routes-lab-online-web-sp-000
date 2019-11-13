@@ -8,7 +8,7 @@
 
 <body>
   <h1>Recipe: #<%= @recipe.id %></h1>
-  <button type="button"><a href="/recipes/new">Add New Recipe</a></button>
+  <button type="button" onclick="/recipes/new">Add New Recipe</button>
   <h2>Name: <%= @recipe.name%></h2>
   <h2>Ingredients: <%= @recipe.ingredients%></h2>
   <h2>Cook Time: <%= @recipe.cook_time%></h2>
