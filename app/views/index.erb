@@ -10,7 +10,8 @@
 
 <body>
   <h1>Recipe Database</h1>
-  <button type="button" action="/recipes/new">Add New Recipe</button>
+  <form method='get' action='/recipes/new'>
+  <button type="submit">Add New Recipe</button>
   <% @recipes.each do |item|%>
   <h2>Name: <%= item[:name] %></h2>
   <h2>Ingredients: <%= item[:ingredients]%></h2>
